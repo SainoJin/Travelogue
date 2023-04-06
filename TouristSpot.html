@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Travelogue</title>
+    <link rel="stylesheet" href="CoursesCss.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Poppins:wght@600&family=Rubik+Glitch&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <script src="https://kit.fontawesome.com/83831b9b44.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="menu">
+          <h3 class="logo">Tourist<span> Spot 🏝⛱</span></h3>
+         
+          <div class="hamburger-menu">
+            <div class="bar"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-container">
+        <div class="main">
+          <header>
+            <div class="overlay">
+              <div class="inner">
+                
+                <h2 class="title">About This Website</h2>
+                <p>
+                        
+                    
+                     </p>
+                
+              </div>
+            </div>
+            <div class="container">
+              <div class="arrow l" onclick="prev()">
+                  <img src="images/l.png" alt="l">
+              </div>
+              <div class="slide slide-1">
+                   <div class="caption">
+                       <h3>El Nido Palawan</h3>
+                       <p style="color: white;">The Paradise is Here!</p>
+                   </div>
+              </div>
+              <div class="slide slide-2">
+                  <div class="caption">
+                      <h3>Coron Palawan</h3>
+                      <p style="color: white;">We get a limited number of breaths in life, so catch as many as you can.</p>
+                  </div>
+             </div>
+             <div class="slide slide-3">
+                  <div class="caption">
+                      <h3>Puerto Princesa <br>
+                        Underground River Palawan</h3>
+                      <p style="color: white;">“Where nature begins and never ends.” </p>
+                  </div>
+             </div>
+             <div class="slide slide-4">
+              <div class="caption">
+                  <h3>Honda Bay Palawan</h3>
+                  <p style="color: white;">“Don't worry, Beach Happy.” </p>
+              </div>
+              
+              
+         </div>
+             <div class="arrow r" onclick="next()">
+                  <img src="images/r.png" alt="r">
+              </div>
+          </div>
+      
+          <script>
+              let slide = document.querySelectorAll('.slide');
+              var current = 0;
+      
+              function cls(){
+                  for(let i = 0; i < slide.length; i++){
+                        slide[i].style.display = 'none';
+                  }
+              }
+      
+              function next(){
+                  cls();
+                  if(current === slide.length-1) current = -1;
+                  current++;
+      
+                  slide[current].style.display = 'block';
+                  slide[current].style.opacity = 0.4;
+      
+                  var x = 0.4;
+                  var intX = setInterval(function(){
+                      x+=0.1;
+                      slide[current].style.opacity = x;
+                      if(x >= 1) {
+                          clearInterval(intX);
+                          x = 0.4;
+                      }
+                  }, 100);
+      
+              }
+      
+              function prev(){
+                  cls();
+                  if(current === 0) current = slide.length;
+                  current--;
+      
+                  slide[current].style.display = 'block';
+                  slide[current].style.opacity = 0.4;
+      
+                  var x = 0.4;
+                  var intX = setInterval(function(){
+                      x+=0.1;
+                      slide[current].style.opacity = x;
+                      if(x >= 1) {
+                          clearInterval(intX);
+                          x = 0.4;
+                      }
+                  }, 100);
+      
+              }
+      
+              function start(){
+                  cls();
+                  slide[current].style.display = 'block';
+              }
+              start();
+          </script>
+          </header>
+        </div>
+
+        <div class="shadow one"></div>
+        <div class="shadow two"></div>
+      </div>
+
+      <div class="links">
+        <ul>
+          <li>
+            <a href="index.html" class="hero-btn" style="--i: 0.05s;">Home</a>
+          </li>
+          <li>
+            <a href="Services.html" class="hero-btn" style="--i: 0.1s;">Services</a>
+          </li>
+          <li>
+            <a href="TouristSpot.html" class="hero-btn" style="--i: 0.15s;">Tourist Spot</a>
+          </li>
+          <li>
+            <a href="Location.html" class="hero-btn" style="--i: 0.2s;">Location</a>
+          </li>
+          <li>
+            <a href="About.html" class="hero-btn" style="--i: 0.25s;">About</a>
+          </li>
+          <li>
+            <a href="Delicacies.html" class="hero-btn" style="--i: 0.3s;">Delicacies</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <script src="tra.js"></script>
+  </body>
+</html>

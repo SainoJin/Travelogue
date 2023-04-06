@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Travelogue</title>
+    <link rel="stylesheet" href="travel.css" />
+  </head>
+  <body onload="slider()"> 
+
+    <div class="container">
+      <div class="navbar">
+        <div class="menu">
+          <h3 class="logo">HO<span>ME 🏘</span></h3>
+		  
+			
+          <div class="hamburger-menu">
+            <div class="bar"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-container">
+        <div class="main">
+          <header>
+			<div class="banner">
+				<div class="slider">
+					<img src="images/stugr.jpg" id="slideImg">
+				</div>
+				<div class="overlay"></div>
+		
+			</div>
+            <div class="overlay">
+              <div class="inner">
+                <h2 class="title">PAL<span>AWAN</span></h2>
+                
+                <p>
+					“The life you travel to, the life you find and sometimes the one that doesn’t want to leave. ”
+                </p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div> 
+                  <ul>
+                    <li>
+                      <a  href="Services.html"><button class="btn">Read More</button></a>
+                    </li>
+               
+                  </ul>
+                  <p>
+                    Palawan’s outstanding land and seascapes make it a world-class cultural, adventure and nature destination. From trekking through the hills, valleys, and rivers to snorkeling and diving, to partaking in and celebrating with the locals at some of the diverse festivals held throughout the year, there are truly remarkable experiences awaiting you in Palawan.
+                          </p>
+                 
+                </div>
+
+              </div>
+            </div>
+          </header>
+        </div>
+
+        <div class="shadow one"></div>
+        <div class="shadow two"></div>
+      </div>
+
+      <div class="links">
+        <ul>
+          <li>
+            <a href="index.html" class="hero-btn" style="--i: 0.05s;">Home</a>
+          </li>
+          <li>
+            <a href="Services.html" class="hero-btn"  style="--i: 0.1s;">Services</a>
+          </li>
+          <li>
+            <a href="TouristSpot.html"  class="hero-btn"  style="--i: 0.15s;">Tourist Spot</a>
+          </li>
+          <li>
+            <a href="Location.html"  class="hero-btn" style="--i: 0.2s;">Location</a>
+          </li>
+          <li>
+            <a href="About.html" class="hero-btn"  style="--i: 0.25s;">About</a>
+          </li>
+          <li>
+            <a href="Delicacies.html" class="hero-btn" style="--i: 0.3s;">Delicacies</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+	
+
+	<script>
+		var slideImg = document.getElementById("slideImg");
+
+		var images = new Array(
+			"images/palawan.jpg",
+			"images/coron-palawan.jpg",
+			"images/puerto-princesa-palawan.jpg",
+			"images/el-nido.jpg"
+		);
+		var len = images.length;
+		var i = 0;
+		function slider (){
+			if(i > len-1){ 
+				i = 0;
+			}
+			slideImg.src = images[i]; 
+			i++;
+			setTimeout('slider()',1000);
+		}
+
+		</script>
+    <script src="tra.js"></script>
+	
+  </body>
+</html>
